@@ -78,7 +78,7 @@ function getArgumentsCount(funcs) {
  *
  */
 function getPowerFunction(exponent) {
-  return function (value) {
+  return function power(value) {
     return value ** exponent;
   };
 }
@@ -117,7 +117,7 @@ function getPolynom() {
 function memoize(func) {
   let cached = false;
   let res;
-  return function () {
+  return function mem() {
     if (!cached) {
       res = func();
       cached = true;
